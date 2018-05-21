@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
+
+
 class Singleton(type):
+    """
+    通过元类实现单例
+    """
     def __init__(self, *args, **kwargs):
         print("__init__")
         self.__instance = None
-        super(Singleton,self).__init__(*args, **kwargs)
+        super(Singleton, self).__init__(*args, **kwargs)
 
     def __call__(self, *args, **kwargs):
         print("__call__")
@@ -28,4 +33,9 @@ print(foo1 is foo2)  # True
 # {'__module__': '__main__', '__metaclass__': <class '__main__.Singleton'>, '_Singleton__instance': <__main__.Foo object at 0x100c52f10>, '__dict__': <attribute '__dict__' of 'Foo' objects>, '__weakref__': <attribute '__weakref__' of 'Foo' objects>, '__doc__': None}
 # True
 
+
+import tensorflow as tf
+node1 = tf.constant(3.0, dtype=tf.float32)
+node2 = tf.constant(4.0)# also tf.float32 implicitly
+print("nodeb1:=",node1, node2)
 
