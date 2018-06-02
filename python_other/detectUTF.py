@@ -40,6 +40,7 @@ def check_unicode(fileName, unicodePath = [], GBKPath = [], otherCode = []):
         data = f.read()
         resDic = cchardet.detect(data) # {'encoding': 'GB2312', 'confidence': 0.99, 'language': 'Chinese'}
         print(fileName, resDic['encoding'])
+        return data
 
 def check_dir_unicode(rootdir):
     rootdir = 'D:\Algorithm\DesignPattern'
@@ -50,9 +51,19 @@ def check_dir_unicode(rootdir):
                 check_unicode(file)
 
 def check_file_unicode(fileName):
+
     pass
 
+def convert_encoding(filename,connext, originEncode, toEncode):
+    middle = connext.decode(originEncode)
+    s = middle.encode(toEncode)
 
+    # write the content
+    with open(filename, 'wb') as f:
+        f.write(s)
+        f.close()
 
-
+data = check_unicode(r'D:\Algorithm\python_other\test.txt')
+convert_encoding("test3.txt", data, "GB18030","UTF8")
+data = check_unicode(r'D:\code\PythonProject\postgres\test3.txt')
 
