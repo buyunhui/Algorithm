@@ -1,34 +1,20 @@
-#ifndef CONCRETE_COMPONENT_H
-#define CONCRETE_COMPONENT_H
+#ifndef __COMCRETE_COMPONENT_H
+#define __COMCRETE_COMPONENT_H
 
-#include "component.h"
+#include "common.h"
+#include "Component.h"
 
-/********** **********/
-
-//女生
-class girl : public Person
+class ConcreteComponent : public Component
 {
 public:
-    string Name() {
-        return "���ƻ�";
-    }
+    ConcreteComponent(string n);
+    ~ConcreteComponent();
 
-    double Cost(int cost) {
-        return cost;
-    }
+    void operation();
+
+private:
+    string name;
 };
 
-// 深度烘培咖啡�?
-class boy : public Person
-{
-public:
-    string Name() {
-        return "男士";
-    }
+#endif
 
-    double Cost(int cost) {
-        return cost;
-    }
-};
-
-#endif // CONCRETE_COMPONENT_H

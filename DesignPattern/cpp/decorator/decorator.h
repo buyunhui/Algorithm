@@ -1,24 +1,21 @@
-#ifndef DECORATOR_H
-#define DECORATOR_H
+#ifndef __DECORATOR_H
+#define __DECORATOR_H
 
-#include "component.h"
+#include "common.h"
+#include "Component.h"
 
-// 调味品
-class PersonDecorator : public Person
+class Decorator : public Component
 {
-public :
-    PersonDecorator(Person *beverage) : m_pBeverage(beverage) {}
+public:
+    Decorator(Component *com);
+    ~Decorator();
+    virtual void before() = 0;
+    virtual void after() = 0;
+    void operation();
 
-    string Name() {
-        return m_pBeverage->Name();
-    }
+private:
+    Component *component;
+};
 
-    double Age(int cost) {
-        return m_pBeverage->Cost(cost);
-    }
+#endif
 
-protected :
-    Person *m_pBeverage;
-} ;
-
-#endif // DECORATOR_H

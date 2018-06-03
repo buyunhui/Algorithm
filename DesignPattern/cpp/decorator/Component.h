@@ -1,17 +1,14 @@
-//component.h
-#ifndef COMPONENT_H
-#define COMPONENT_H
+#ifndef __COMPONET_H
+#define __COMPONET_H
 
-#include <string>
-
-using namespace std;
-
-// 所有饮料的基类
-class Person
+class Component
 {
 public:
-    virtual string Name() = 0;  // 名称
-    virtual double Cost(int cost) = 0;  // 价钱
+    Component();
+    ~Component();
+
+    virtual void operation() = 0;
 };
 
-#endif // COMPONENT_H
+#endif
+

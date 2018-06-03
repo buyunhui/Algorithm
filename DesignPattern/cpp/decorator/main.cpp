@@ -1,13 +1,15 @@
 #include "ConcreteComponent.h"
-#include "ConcreteComponent.h"
-#include <iostream>
+#include "ConcreteDecoratorA.h"
+#include "ConcreteDecoratorB.h"
 
 
 int main()
 {
-    using namespace std;
-    
-    Person *p = new girl();
-    cout<< p->Name()<<endl;
+    Component *com = new ConcreteComponent("man");
+    Component *decoratorA = new ConcreteDecoratorA("good ", com);
+
+    Component *decoratorB = new ConcreteDecoratorB("super ", decoratorA);
+    decoratorB->operation();
+
     return 0;
 }

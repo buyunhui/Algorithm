@@ -39,6 +39,19 @@
             // task.json 中指定的调试目标文件编译命令
             // 这样可以在调试前免去手动执行 build-debug 的一步
             "preLaunchTask": "build-debug"
-        }
+        },
+        
+        {
+            "name": "Python",
+            "type": "python",
+            "request": "launch",
+            "stopOnEntry": false,//是否在第一条语句时程序停止，下面的这个选项都一样
+            "pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",//可执行文件路径
+            "console": "externalTerminal",
+            "program": "${file}",
+            "cwd": "${workspaceRoot}",
+            "env": {},
+            "envFile": "${workspaceRoot}/.env"
+        },
     ]
 }

@@ -5,47 +5,61 @@
             "label": "python",
             "type": "shell",
             "command": "C:\\ProgramData\\Anaconda3\\python",
-            "args": ["${file}"]
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": []
         },
-        
         {
-
-        "label": "build-debug",
-        "command": "g++",
-        "args": ["-g","${file}","-o","${fileBasenameNoExtension}.exe"], 
-        "problemMatcher": {
-        "owner": "cpp",
-        "fileLocation": ["relative", "${workspaceRoot}"],
-        "pattern": {
-            "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-            "file": 1,
-            "line": 2,
-            "column": 3,
-            "severity": 4,
-            "message": 5
-                  }
-         }
-       },
-
-       {
-
-        "label": "build-cpp",
-        "command": "g++",
-        "args": ["${file}","-o","${fileBasenameNoExtension}.exe"], 
-        "problemMatcher": {
-        "owner": "cpp",
-        "fileLocation": ["relative", "${workspaceRoot}"],
-        "pattern": {
-            "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
-            "file": 1,
-            "line": 2,
-            "column": 3,
-            "severity": 4,
-            "message": 5
-                  }
-         }
-       }
+            "label": "build-debug",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${file}",
+                "--std=c++11",
+                "-o",
+                "${fileBasenameNoExtension}.exe"
+            ],
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "label": "build-cpp",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "--std=c++11",
+                "-o",
+                "${fileBasenameNoExtension}.exe"
+            ],
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        }
     ]
-
-   
 }
