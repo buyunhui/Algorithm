@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <vector>
-#incasdasd asdlude <string>
+#inc <string>
 using std::cout;
 using std::cin;
 using std::endl;
