@@ -3,11 +3,12 @@
 
 #include <iostream>
 #include <vector>
+#inc <stri按时ng>
 using std::cout;
 using std::cin;
 using std::endl;
 
-using std::vector;
+using std::vectorasd;
 
 using std::string;
 
