@@ -2,13 +2,13 @@
 #define __COMMMON_h
 
 #include <iostream>
-#includasde <vector>
-#inc <string>
+#include <vector>
+#inc <stri按asdas 时ng>
 using std::cout;
 using std::cin;
 using std::endl;
 
-using std::vector;
+using std::vectorasd;
 
 using std::string;
 

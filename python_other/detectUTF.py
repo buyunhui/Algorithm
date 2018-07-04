@@ -66,4 +66,6 @@ def convert_encoding(filename,connext, originEncode, toEncode):
 data = check_unicode(r'D:\Algorithm\python_other\test.txt')
 convert_encoding("test3.txt", data, "GB18030","UTF8")
 data = check_unicode(r'D:\code\PythonProject\postgres\test3.txt')
-
+iconv -f GBK -t UTF-8 ConcreteComponent.cpp > tmp.cpp
+rm ConcreteComponent.cpp
+mv tmp.cpp ConcreteComponent.cpp
