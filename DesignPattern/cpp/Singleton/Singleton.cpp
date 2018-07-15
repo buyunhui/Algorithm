@@ -16,10 +16,13 @@ private:
     President() {}
 };
 
+
+
 int main()
 {
     const President& president1 = President::GetInstance();
     const President& president2 = President::GetInstance();
 
     std::cout<<(&president1 == &president2); // same address, point to same object.
+    
 }
