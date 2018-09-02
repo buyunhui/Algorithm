@@ -21,7 +21,7 @@ class Connection1:
         return self._state.close(self)
 
 
-# Connection state base class
+#Connection state base class
 class ConnectionState:
     @staticmethod
     def read(conn):
@@ -40,7 +40,7 @@ class ConnectionState:
         raise NotImplementedError()
 
 
-# Implementation of different states
+#Implementation of different states
 class ClosedConnectionState(ConnectionState):
     @staticmethod
     def read(conn):
@@ -86,6 +86,3 @@ if __name__ == '__main__':
     c.write("")
     c.close()
     print(c._state)
-
-
-

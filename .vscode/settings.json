@@ -1,7 +1,6 @@
 {
     "files.encoding": "gbk",
     "files.autoGuessEncoding":true,
-    "autoDocstring.docstringFormat": "Numpy",
     "files.associations": {
         "xstring": "cpp",
         "iosfwd": "cpp",
@@ -9,5 +8,12 @@
         "iostream": "cpp",
         "system_error": "cpp",
         "xlocale": "cpp"
-    }
+    },
+    "python.linting.pylintPath": "C:\\ProgramData\\Anaconda3\\Scripts\\pylint.exe",
+    "python.formatting.provider": "yapf",
+    "python.formatting.yapfPath": "C:\\ProgramData\\Anaconda3\\Scripts\\yapf.exe",
+    "python.linting.pylintArgs": [
+        "–disable-msg=C0103"
+    ],
+    "python.linting.enabled": true,
 }
